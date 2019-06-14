@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+    List<SelectListItem> list = new List<SelectListItem>();
+    list.Add(new SelectListItem() { Text = "Yes", Value = "Yes" });
+    list.Add(new SelectListItem() { Text = "No", Value = "No" });
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Test</title>
+</head>
+<body>
+    <div> 
+        @ViewBag.Message
+    </div>
+    <div>
+        @using (Html.BeginForm("Test", "Home", FormMethod.Post))
+        {
+            <div>
+                username: <input type="text", name="username", id="usrid", value=""/>
+
+            </div>
+            <div>
+                password: <input type="text", name="password", id="usrid", value=""/>
+            </div>
+            <div>
+                Responce @Html.DropDownList("Responce", list,"select")
+
+            </div>
+        }
+
+    </div>
+</body>
+</html>
