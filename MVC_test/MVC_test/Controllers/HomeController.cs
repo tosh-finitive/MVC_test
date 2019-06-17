@@ -53,6 +53,11 @@ namespace MVC_test.Controllers
         {
             return View();
         }
+
+        public ActionResult ATM()
+        {
+            return View();
+        }
             
     }
 }

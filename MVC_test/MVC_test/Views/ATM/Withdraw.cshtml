@@ -1,0 +1,29 @@
+﻿@model MVC_test.Models.withdrawCash
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Withdraw</title>
+</head>
+<body>
+    @using (Html.BeginForm("Withdraw", "ATM", FormMethod.Post))
+    {
+        <p>Choose an amount to Withdraw</p>
+        <input type="number" name="withdraw" placeholder="$$$" />
+        <input type="submit" name="Submit Request" />
+
+    }
+    @if (@ViewBag.showBalance)
+    {
+        <p>You just removed $ @ViewBag.takeOutRequest from your account</p>
+       
+    }
+
+</body>
+</html>

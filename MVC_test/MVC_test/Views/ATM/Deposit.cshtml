@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Withdraw</title>
+</head>
+<body>
+    @using (Html.BeginForm("Deposit", "ATM", FormMethod.Post))
+    {
+        <p>Choose an amount to Deposit</p>
+        <input type="number" name="deposit" placeholder="$$$" />
+        <input type="submit" name="Submit Request" />
+
+    }
+    @if (@ViewBag.showBalance)
+    {
+        <p>You just deposited $ @ViewBag.takeOutRequest into your account</p>
+
+    }
+
+</body>
+</html>

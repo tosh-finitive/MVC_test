@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>Welcome to the ATM!</head>
+<body>
+    <div>
+        <p>Choose an option</p>
+        <table>
+            <tr>
+                <td>
+                    Withdraw Money
+                </td>
+                <td>
+                    @Html.ActionLink("Withdraw", "Withdraw", "ATM")
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Deposit Money
+                </td>
+                <td>@Html.ActionLink("Deposit", "Deposit", "ATM")</td>
+                
+            </tr>
+        </table>
+
+    </div>
+
+</body>
+
+@Html.ActionLink("Home", "Index", "Home")
+
+
+
+</html>
