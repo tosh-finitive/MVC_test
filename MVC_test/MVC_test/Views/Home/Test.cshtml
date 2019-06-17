@@ -10,35 +10,32 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Test</title>
-</head>
+<title> Test Input MVC </title>
+<meta name="viewport" content="width=device-width" />
+<link href="~/Content/style.css" rel="stylesheet" />
+ 
 <body>
-    <div> 
-        @ViewBag.Message
-    </div>
-    <div>
+    <div class="inputbox">
         @using (Html.BeginForm("Test", "Home", FormMethod.Post))
         {
-            <div>
-                First Name: <input type="text" name="firstName" id="usrid" value=""/>
+            <h1>Test Input MVC</h1>
+            <p>First Name:</p>
+            <input type="text" name="firstName" id="usrid" value="" placeholder="Enter First Name"/>
+            <p>Last Name:</p>
+            <input type="text" name="lastName" id="usrid" value="" placeholder="Enter Last Name"/>
+       
+            <p>
+                Responce @Html.DropDownList("Responce", list, "select")
 
-            </div>
-            <div>
-                Last Name: <input type="text" name="lastName" id="usrid" value=""/>
-            </div>
-            <div>
-                Responce @Html.DropDownList("Responce", list,"select")
-
-            </div>
-            <div>
-                Ice <input type="radio"  name="iceRadio"  value="crushed" /> Crushed
-                <input type="radio"  name="iceRadio"  value="cubed" /> Cubed
-            </div>
-            <div> <input type="submit" name="Submit"/></div>
-            <div>
+            </p>
+            <p>
+                Ice <input type="radio" name="iceRadio" value="crushed" /> Crushed
+            <input type="radio" name="iceRadio" value="cubed" /> Cubed
+            </p>
+            <p> <input type="submit" name="Submit" /></p>
+            <p>
                 @Html.ActionLink("Home", "Index")
-            </div>
+            </p>
         }
         @if (@ViewBag.flagvalue)
         {
@@ -49,4 +46,5 @@
 
     </div>
 </body>
+</head>
 </html>

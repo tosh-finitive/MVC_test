@@ -1,0 +1,45 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bookman Old Style';
+    background-size: cover;
+    background-position: center;
+
+}
+
+.inputbox{
+
+    width: 320px;
+    height: 420px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.inputbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.inputbox input{
+
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 2;
+}
