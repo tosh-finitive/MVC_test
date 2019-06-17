@@ -7,12 +7,14 @@
 
 <html>
 <head>
+    <title>Deposit Money</title>
     <meta name="viewport" content="width=device-width" />
     <title>Withdraw</title>
 </head>
 <body>
     @using (Html.BeginForm("Deposit", "ATM", FormMethod.Post))
     {
+        <h1>DEPOSIT MONEY</h1>
         <p>Choose an amount to Deposit</p>
         <input type="number" name="deposit" placeholder="$$$" />
         <input type="submit" name="Submit Request" />
@@ -23,6 +25,13 @@
         <p>You just deposited $ @ViewBag.takeOutRequest into your account</p>
 
     }
+
+    <div>
+        Deposit Page @Html.ActionLink("Withdraw", "Withdraw", "ATM")
+    </div>
+    <div>
+        Home Page @Html.ActionLink("ATM", "ATM", "Home")
+    </div>
 
 </body>
 </html>
