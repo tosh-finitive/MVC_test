@@ -21,16 +21,30 @@
         @using (Html.BeginForm("Test", "Home", FormMethod.Post))
         {
             <div>
-                username: <input type="text", name="username", id="usrid", value=""/>
+                First Name: <input type="text" name="firstName" id="usrid" value=""/>
 
             </div>
             <div>
-                password: <input type="text", name="password", id="usrid", value=""/>
+                Last Name: <input type="text" name="lastName" id="usrid" value=""/>
             </div>
             <div>
                 Responce @Html.DropDownList("Responce", list,"select")
 
             </div>
+            <div>
+                Ice <input type="radio"  name="iceRadio"  value="crushed" /> Crushed
+                <input type="radio"  name="iceRadio"  value="cubed" /> Cubed
+            </div>
+            <div> <input type="submit" name="Submit"/></div>
+            <div>
+                @Html.ActionLink("Home", "Index")
+            </div>
+        }
+        @if (@ViewBag.flagvalue)
+        {
+            <p>Your name is @ViewBag.First</p>
+            <p>You prefer your ice @ViewBag.Ice</p>
+
         }
 
     </div>
